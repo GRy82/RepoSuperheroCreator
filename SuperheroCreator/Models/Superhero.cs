@@ -9,7 +9,7 @@ namespace SuperheroCreator.Models
     public class Superhero
     {
         [Key]
-        public int Id { get; set; }
+        public int SuperheroId { get; set; }
         public string HeroName { get; set; }
 
         public string CivilianName { get; set; }
