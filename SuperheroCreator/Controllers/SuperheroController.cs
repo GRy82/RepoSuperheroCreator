@@ -12,7 +12,7 @@ namespace SuperheroCreator.Controllers
     public class SuperheroController : Controller
     {
 
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
         public SuperheroController(ApplicationDbContext context)
         {
@@ -22,8 +22,8 @@ namespace SuperheroCreator.Controllers
         // GET: SuperheroController
         public ActionResult Index()
         {
-
-            return View(new Superhero());
+            var superhero = _context.Superheroes;
+            return View(superhero);
 
         }
 
