@@ -22,7 +22,9 @@ namespace SuperheroCreator.Controllers
         // GET: SuperheroController
         public ActionResult Index()
         {
-            return View();
+
+            return View(new Superhero());
+
         }
 
         // GET: SuperheroController/Details/5

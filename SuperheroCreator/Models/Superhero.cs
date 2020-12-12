@@ -21,3 +21,4 @@ namespace SuperheroCreator.Models
         public string CatchPhrase { get; set; }
     }
 }
+
