@@ -59,16 +59,21 @@ namespace SuperheroCreator.Controllers
         // GET: SuperheroController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Superhero superhero = _context.Superheroes.Single(i => i.SuperheroId == id);
+            return View(superhero);
         }
 
         // POST: SuperheroController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, Superhero superhero)
         {
             try
             {
+                Superhero hero = _context.Superheroes.Single(s => s.SuperheroId == id);
+                _context.Superheroes.Remove(hero);
+                _context.Add(superhero);
+                _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch
