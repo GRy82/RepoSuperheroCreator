@@ -31,27 +31,27 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (Superhero superhero in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.HeroName)
+                @Html.DisplayFor(modelItem => superhero.HeroName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CivilianName)
+                @Html.DisplayFor(modelItem => superhero.CivilianName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PrimaryAbility)
+                @Html.DisplayFor(modelItem => superhero.PrimaryAbility)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SecondaryAbility)
+                @Html.DisplayFor(modelItem => superhero.SecondaryAbility)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CatchPhrase)
+                @Html.DisplayFor(modelItem => superhero.CatchPhrase)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.SuperheroId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SuperheroId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.SuperheroId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@superhero.SuperheroId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@superhero.SuperheroId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@superhero.SuperheroId">Delete</a>
             </td>
         </tr>
 }
