@@ -6,10 +6,9 @@
 
 <h1>The OFFICIAL Superhero Database</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<img src="images/superhero_explosion2.png" style="width: 100%;"/>
+
+<table class="table" style="text-align: center;">
     <thead>
         <tr>
             <th>
@@ -19,9 +18,12 @@
         </tr>
     </thead>
     <tbody>
+        <tr>
+            <td style="border-bottom: 1px solid #dee2e6;"><a asp-action="Create">Create New Hero</a></td>
+        </tr>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td style="border-top: none;">
                 <a asp-action="Details" asp-route-id="@item.SuperheroId">@item.HeroName</a>
             </td>
         </tr>
