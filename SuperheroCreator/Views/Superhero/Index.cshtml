@@ -15,18 +15,6 @@
             <th>
                 Hero Name
             </th>
-            <th>
-                Civilian Name
-            </th>
-            <th>
-                Primary Power
-            </th>
-            <th>
-                Secondary Power
-            </th>
-            <th>
-                Catchphrase
-            </th>
             <th></th>
         </tr>
     </thead>
@@ -34,24 +22,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.HeroName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CivilianName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrimaryAbility)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SecondaryAbility)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CatchPhrase)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.SuperheroId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.SuperheroId">@item.HeroName</a> |
-                <a asp-action="Delete" asp-route-id="@item.SuperheroId">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.SuperheroId">@item.HeroName</a>
             </td>
         </tr>
 }
