@@ -71,10 +71,7 @@ namespace SuperheroCreator.Controllers
         {
             try
             {
-                Superhero hero = _context.Superheroes.Single(s => s.SuperheroId == id);
-                _context.Superheroes.Remove(hero);
-                superhero.SuperheroId = id;
-                _context.Add(superhero);
+                _context.Superheroes.Update(superhero);
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
