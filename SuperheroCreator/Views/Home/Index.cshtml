@@ -2,8 +2,30 @@
     ViewData["Title"] = "Home Page";
 }
 
+<hr />
 <div class="text-center">
-    <h1 class="display-4">Superheroes, Welcome!</h1>
-
-    <img style="width: 100%; height: auto;" src="/images/HeroScholar.jpg"/>
+    <h1 class="display-4" style="margin-bottom: 8%; text-shadow: 5px 5px 5px orange;">Superheroes, Welcome!</h1>
+    <hr />
+    <div class="row">
+        <h5 class="col-md-6">Create Hero</h5>
+        <h5 class="col-md-6">View Hero Database</h5>
+    </div>
+    <div class="row" style="margin-top: 4%;">
+        <div class="col-md-6">
+            <a asp-area="" asp-controller="Superhero" asp-action="Create">
+                <img style="width: 16%; height: auto;" src="/images/hammer-cartoon-vector-1036743.jpg" alt="picture of construction hammer." />
+            </a>
+        </div>
+        <div class="col-md-6">
+            <a asp-area="" asp-controller="Superhero" asp-action="Index">
+                <img style="width: 30%; height: auto;" src="/images/book_image.jpeg" alt="picture of hard-covered text." />
+            </a>
+        </div>
+    </div>
 </div>
+
+
+<hr />
+
+<img style="width: 100%; height: auto;" src="/images/HeroScholar.jpg" />
+
